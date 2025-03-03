@@ -61,6 +61,7 @@ $$ \displaystyle \exists C > 0, \exists N: \forall n, f(n) \geq C  \cdot  g(n)$$
 
 
 <ins> Опр.</ins>  $f, g : N \Rightarrow N$ Тогда $f = \Theta(g)$ если 
+
 $$ \exists c_1, c_2 > 0, \exists N: \forall n \geq N, c_1 \cdot g(n) \leq f(n) \leq c_2  \cdot  g(n) $$
 
 
