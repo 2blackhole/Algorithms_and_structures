@@ -100,7 +100,7 @@ $$T(n) = O(n logn)$$
 
 <ins> Док-во.</ins>
 
-$$Ы$$
+$$T(n) \leq T(\lfloor \frac{n}{2} \rfloor) + T(\lceil \frac{n}{2} \rceil) + Dn$$
 
 Докажем по индукции, что
 
