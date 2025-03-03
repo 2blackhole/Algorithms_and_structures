@@ -9,3 +9,6 @@
 **Первый курс**
 1. [Асимптотика, Бинарный поиск](first_course/Lection1.md)  
 2. [Сортировки, merge sort, randomized Qs, Quick Select](first_course/Lection2.md)
+
+***
+*На данных момент представлена только небольшая часть лекций*
