@@ -55,9 +55,14 @@ $\forall n:  6n + 4 \leq 11n$
 ---
 На практике обычно не интересно как ведет себя алгоритм на небольших $n$, скорее интересно при $n \rightarrow +\inf$ 
 
-<ins> Опр.</ins> Пусть $f, g : N \Rightarrow N$ Тогда $f = \Omega (g)$ если $$ \displaystyle \exists C > 0, \exists N: \forall n, f(n) \geq C  \cdot  g(n)$$
+<ins> Опр.</ins> Пусть $f, g : N \Rightarrow N$ Тогда $f = \Omega (g)$ если 
 
-<ins> Опр.</ins>  $f, g : N \Rightarrow N$ Тогда $f = \Theta(g)$ если $$ \exists c_1, c_2 > 0, \exists N: \forall n \geq N, c_1 \cdot g(n) \leq f(n) \leq c_2  \cdot  g(n)  $$
+$$ \displaystyle \exists C > 0, \exists N: \forall n, f(n) \geq C  \cdot  g(n)$$
+
+
+<ins> Опр.</ins>  $f, g : N \Rightarrow N$ Тогда $f = \Theta(g)$ если 
+$$ \exists c_1, c_2 > 0, \exists N: \forall n \geq N, c_1 \cdot g(n) \leq f(n) \leq c_2  \cdot  g(n) $$
+
 
 <ins> Пр-ры.</ins>
 
