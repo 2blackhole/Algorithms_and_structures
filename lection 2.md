@@ -34,7 +34,9 @@ $$n! = 1 \cdot 2 \cdot ... \cdot n \leq n^n$$
 $$log_2(n!) \leq n \cdot log_2n \Rightarrow log(n!) = O(n \cdot logn)$$
 
 В другую 
+
 $$\displaystyle n! = 1 \cdot 2 \cdot 3 \cdot ... \cdot \lceil \frac{n}{2} \rceil \cdot ... \cdot n \geq \lceil \frac{n}{2} \rceil \cdot (\lceil \frac{n}{2} \rceil + 1) \cdot ... \cdot n \geq \lceil \frac{n}{2} \rceil ^ {n - \lceil \frac{n}{2} \rceil + 1}$$
+
 *Если* $n = 2k$ $\Rightarrow n! \geq k(k+1) \cdot ... \cdot 2k \leq k^{k + 1} \Rightarrow log(n!) \geq log(k^{k+1}) = (k + 1) logk \geq \frac{n}{2} log\frac{n}{2} =$
 $= \frac{1}{2}n \cdot (logn - 1) = \frac{1}{2}logn - \frac{1}{2}n$
 *Если* $n = 2k + 1 \Rightarrow n! \geq (k + 1)(k + 2)(k + 3) \cdot ... \cdot (2k + 1) \geq (k + 1)^{k + 1} \Rightarrow$
