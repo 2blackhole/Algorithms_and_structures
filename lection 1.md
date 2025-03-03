@@ -34,67 +34,118 @@ print(x);
 Итого $6n + 4$ операций, ну это же не интересно так считать. Поэтому на самом деле эта шестерка и 4 неинтересна, можно просто написать $O(n)$
 
 ---
-<ins> Опр.</ins>  Пусть $\displaystyle f, g : N \Rightarrow N$  Тогда $f = O(g)$ если $$\exists N, \exists C: \forall n \geq N: f(n) \leq C  \cdot  g(n)$$    
+<ins> Опр.</ins>  Пусть $\displaystyle f, g : N \Rightarrow N$  Тогда $f = O(g)$ если
+$$\exists N, \exists C: \forall n \geq N: f(n) \leq C  \cdot  g(n)$$    
+
 <ins> Пример.</ins>
+
 $6n + 4 = O(n)$
+
 $\exists C = 7$
+
 $6n + 4 \leq 7n$ при $n \geq 4$
 
 ---
 <ins> Утв.</ins> $f = O(g)  \iff \exists D: \forall n: f(n) \leq D  \cdot  g(n)$
+
 <ins> Пр.</ins>
+
 $\forall n:  6n + 4 \leq 11n$
 
 ---
 На практике обычно не интересно как ведет себя алгоритм на небольших $n$, скорее интересно при $n \rightarrow +\inf$ 
-<ins> Опр.</ins> Пусть $f, g : N \Rightarrow N$ Тогда $f = \Omega (g)$ если $$ \displaystyle \exists C > 0, \exists N: \forall n, f(n) \geq C  \cdot  g(n)$$
-<ins> Опр.</ins>  $f, g : N \Rightarrow N$ Тогда $f = \Theta(g)$ если $$ \exists c_1, c_2 > 0, \exists N: \forall n \geq N, c_1 \cdot g(n) \leq f(n) \leq c_2  \cdot  g(n)  $$
+
+<ins> Опр.</ins> Пусть $f, g : N \Rightarrow N$ Тогда $f = \Omega (g)$ если 
+
+$$ \displaystyle \exists C > 0, \exists N: \forall n, f(n) \geq C  \cdot  g(n)$$
+
+
+<ins> Опр.</ins>  $f, g : N \Rightarrow N$ Тогда $f = \Theta(g)$ если 
+
+$$ \exists c_1, c_2 > 0, \exists N: \forall n \geq N, c_1 \cdot g(n) \leq f(n) \leq c_2  \cdot  g(n) $$
+
+
 <ins> Пр-ры.</ins>
+
 1) $n^a$ и $n^b$ , $a, b = const$
+
 $n^a = O(n^b)$ если $a \leq b$
+
 $n^a = \Omega(n^b)$ если $a \geq b$
+
 $n^a = \Theta(n^b)$ если $a = b$
 
 
-2) $log_a n$ и $log_b n$, $a, b = const$
+3) $log_a n$ и $log_b n$, $a, b = const$
+
 $\displaystyle log_a n = \frac{log_b n}{log_b a} \rightarrow log_a n = \Theta(log_b n)$ 
 
 
-3) $2^{2^{n}}$ и $n^n = 2 ^ {n log_2 n}$
+5) $2^{2^{n}}$ и $n^n = 2 ^ {n log_2 n}$
+
 $n^n = O(2^{2^{n}})$
+
 $2^{2^{n}} = \Omega(n^n)$
 
 ---
 ### Занимательная теорема 
+
 Пусть $T(n)$ - время работы алгоритма на входах длины $n$. Пусть 
 $$T(n) = T(\lfloor \frac{n}{2} \rfloor) + T(\lceil \frac{n}{2} \rceil) + O(n)$$
+
 *(Сначала решаем задачу на левом куске, потом на правом, потом склеиваем)*
-Тогда $$T(n) = O(n logn)$$
+Тогда
+$$T(n) = O(n logn)$$
+
 
 <ins> Док-во.</ins>
-$$Ы$$
+
+$$T(n) \leq T(\lfloor \frac{n}{2} \rfloor) + T(\lceil \frac{n}{2} \rceil) + Dn$$
+
 Докажем по индукции, что
+
 $$T(n) \leq C  \cdot  nlog n, \forall n \geq 2$$
+
 База индукции.
 подберем С таким образом, чтобы для всех входах выполнялось неравенство выше (для $T(1), T(2) ... T(10)$)
-Пусть $$T(k) \leq \displaystyle C \cdot klog_2k$$ при $$2 \leq k \leq n - 1$$
+Пусть 
+$$T(k) \leq \displaystyle C \cdot klog_2k$$ при $$2 \leq k \leq n - 1$$
+
 Докажем для $k = n$
+
 $$T(n) \leq 2 \cdot T(\lceil \frac{n}{2} \rceil) + Dn, \lceil \frac{n}{2} \rceil \leq \frac{n + 1}{2} \Rightarrow$$
+
 $$\Rightarrow T(n) \leq 2 \cdot C \cdot \frac{n+1}{2} \cdot log_2 \frac{n+1}{2} + Dn = C(n+1)(log_2(n+1) - 1) + Dn$$
+
 Невероятнейшим образом заметим что $n + 1 \leq n \sqrt{2}$, тогда
+
 $$log_2(n+1) \leq log_2 (n\sqrt{2}) = log_2 n + \frac{1}{2}$$
+
 Используем невероятный красивейший поступок для того чтобы продолжить цепочку неравенств
+
 $$C(n+1)(log_2(n+1) - 1) + Dn = C(n+1)(log_2n - \frac{1}{2}) + Dn = $$$$ = C  \cdot  n  \cdot  log_2 n - \frac{1}{2}C \cdot n + C \cdot log_2 n - \frac{1}{2}C + Dn = I$$
-Осталось доказать что$$I \leq C \cdot n \cdot log_2n$$
-Достаточно до казать что $$Dn + C \cdot log_2n \leq \frac{1}{2}C \cdot n$$
+
+Осталось доказать что
+$$I \leq C \cdot n \cdot log_2n$$
+
+Достаточно до казать что 
+$$Dn + C \cdot log_2n \leq \frac{1}{2}C \cdot n$$
+
 Красивейшим образом $C = 2D$, тогда 
+
 $$Dn + 2D \cdot log_2n \stackrel{?}{\leq} 3Dn$$
+
 $$log_2n \stackrel{?}{\leq} n$$
+
 Ну это вообще по факту, там для $\forall c > 0, C = c\cdot D$  так начиная с некоторого номера. 
 ***
 ## Бинарный поиск
 
-Дан отсортированный массив чисел в неубывающем порядке $$a_0 \leq a_1 \leq ... \leq a_{n-1}$$ Узнать, есть ли $x$ в этом массиве. Понятно что можно пройти массив за линию, но если запросов "а есть ли $x$" будет много, то выйдет накладно ($q$ запросов отработает за $O(n \cdot q)$. В таком случае применяется алгоритм бинарного поиска. 
+Дан отсортированный массив чисел в неубывающем порядке
+
+$$a_0 \leq a_1 \leq ... \leq a_{n-1}$$ 
+
+Узнать, есть ли $x$ в этом массиве. Понятно что можно пройти массив за линию, но если запросов "а есть ли $x$" будет много, то выйдет накладно ($q$ запросов отработает за $O(n \cdot q)$. В таком случае применяется алгоритм бинарного поиска. 
 
 Уткнемся в центральный элемент массива, сравнение этого элемента с $x$ однозначно даст знать, в какой части массива может располагаться $x$: в правой или левой. Таким образом можно отбросить половину массива. 
 
