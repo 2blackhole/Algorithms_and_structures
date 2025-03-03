@@ -6,5 +6,6 @@
 
 ## Список лекций
 
-1. [Асимптотика, Бинарный поиск](./Lection 1. Асимптотика, бинарный поиск.md)  
-2. [Сортировки, merge sort, randomized Qs, Quick Select](./Lection 2. Сортировки, merge sort, randomized Qs, Quick Select.md)
+**Первый курс**
+1. [Асимптотика, Бинарный поиск](first_course/Lection1.md)  
+2. [Сортировки, merge sort, randomized Qs, Quick Select](first_course/Lection2.md)
