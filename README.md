@@ -8,7 +8,3 @@
 
 1. [Асимптотика, Бинарный поиск](Lection 1. Асимптотика, бинарный поиск.md)  
 2. [Сортировки, merge sort, randomized Qs, Quick Select](Lection 2. Сортировки, merge sort, randomized Qs, Quick Select.md)
-
-## Лицензия
-
-Распространяется под лицензией [MIT](LICENSE).
