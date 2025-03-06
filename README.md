@@ -9,6 +9,7 @@
 **Первый курс**
 1. [Асимптотика, Бинарный поиск](first_course/Lection1.md)  
 2. [Сортировки, merge sort, randomized Qs, Quick Select](first_course/Lection2.md)
+3. [Сортировки. Derandomized qs/quick sort. Стабильная сортировка пар чисел /LSD](first_course/Lection3.md)
 
 ***
 *На данных момент представлена только небольшая часть лекций*
