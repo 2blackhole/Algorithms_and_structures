@@ -11,6 +11,7 @@
 2. [Сортировки, merge sort, randomized Qs, Quick Select](first_course/Lection2.md)
 3. [Сортировки. Derandomized qs/quick sort. Стабильная сортировка пар чисел /LSD](first_course/Lection3.md)
 4. [Кучи. Сортировка на куче](first_course/Lection4.md)
+5. [Биномиальные кучи. Амортизизационный анализ. Динамический массив. ](first_course/Lection5.md)
 
 ***
 *На данных момент представлена только небольшая часть лекций*
